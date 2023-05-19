@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Практикум input</title>
+
+  <!-- Стили -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/index.css" />
+
+  <!-- Скрипты -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="js/index.js" defer></script>
+</head>
+
+<body>
+  <div class="app-container loading">
+    <div class="header-container">
+      <nav class="navbar navbar-expand-lg bg-secondary">
+        <div class="container">
+          <div class="theme-container form-check form-switch me-3">
+            <!-- Переключатель темы -->
+            <input class="form-check-input" type="checkbox" role="switch" id="theme" name="theme">
+          </div>
+
+          <div class="username-container">
+            <!-- Здесь будет имя пользователя -->
+          </div>
+
+
+          <!-- Выбор аккаунта -->
+          <select class="form-select ms-auto" name="user" id="user-select">
+            <option value="6454b539e0b3870d809b395f" selected>6454b539e0b3870d809b395f</option>
+            <option value="6454b539e0b3870d809b3960">6454b539e0b3870d809b3960</option>
+          </select>
+        </div>
+      </nav>
+    </div>
+
+
+    <div class="main-container">
+      <main class="container mt-5">
+        <div class="row">
+          <!-- Поиск контактов -->
+          <div class="col">
+            <h1>Контакты</h1>
+            <hr class="mb-3">
+
+            <div class="form-floating mb-3">
+              <input class="form-control" name="search" id="search" placeholder="поиск" type="text">
+              <label for="search">Поиск</label>
+            </div>
+
+            <ul class="contacts-container list-group">
+              <!-- Здесь будут контакты -->
+            </ul>
+          </div>
+
+          <!-- Текст письма -->
+          <div class="col">
+            <form id="draft-form">
+              <h1>Письмо сотруднику</h1>
+              <hr class="mb-3">
+
+
+              <div class="form-floating mb-3">
+                <input class="form-control" name="to" id="to" placeholder="кому письмо" type="email">
+                <label for="to">Кому</label>
+              </div>
+              <div class="form-floating mb-3">
+                <textarea class="form-control" name="text" id="text" placeholder="Уважаемый коллега..."></textarea>
+                <label for="text">Письмо</label>
+              </div>
+              <div class="d-flex justify-content-end mb-3">
+                <button type="submit" class="btn btn-outline-primary ms-3">
+                  Отправить
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

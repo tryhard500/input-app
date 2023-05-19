@@ -1,0 +1,46 @@
+/* Основные стили */
+.app-container {
+    min-height: 100vh;
+}
+
+.username-container {
+    font-size: 24px;
+}
+
+#user-select {
+    width: 300px;
+}
+textarea[name="text"] {
+    min-height: 300px;
+}
+
+.form-switch .form-check-input {
+    height: 2rem;
+    width: 4rem;
+}
+
+.form-floating>.form-control,
+.form-floating>.form-control:focus,
+.form-floating>.form-control:not(:placeholder-shown) {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+
+/* Загрузка приложения */
+.loading .username-container,
+.loading .theme-container,
+.loading .main-container {
+    display: none;
+}
+
+/* Тёмная тема */
+.theme-dark,
+.theme-dark textarea,
+.theme-dark textarea:focus,
+.theme-dark input,
+.theme-dark input:focus,
+.theme-dark input:checked {
+    background-color: black;
+    color: white;
+}
